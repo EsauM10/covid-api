@@ -68,4 +68,6 @@ def remove_user(id: int):
 
 
 if(__name__=='__main__'):
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8000)), debug=False)
+    host = os.environ.get('HOST', '0.0.0.0')
+    port = int(os.environ.get('PORT', 8000))
+    app.run(host, port, debug=False)
